@@ -686,6 +686,94 @@ h3.display { font-size: clamp(1.6rem, 3vw, 2.4rem); }
 }
 .reveal.is-visible { opacity: 1; transform: none; }
 
+/* =========================================================
+   How it works
+   ========================================================= */
+
+.how { padding: 90px 0; background: var(--cream); }
+.how__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+@media (max-width: 800px) { .how__grid { grid-template-columns: 1fr; } }
+
+.how__step {
+  background: var(--cream-light);
+  border-radius: var(--radius-lg);
+  padding: 40px 32px;
+  border: 1px solid rgba(31,58,42,.08);
+}
+.how__num {
+  font-family: var(--display);
+  font-size: 56px;
+  color: var(--coral);
+  line-height: 1;
+  margin-bottom: 18px;
+  letter-spacing: -.04em;
+}
+.how__step h3 {
+  font-family: var(--display);
+  font-size: 22px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+.how__step p { color: var(--ink-soft); font-size: 15px; }
+
+/* =========================================================
+   Inside / strain grid
+   ========================================================= */
+
+.inside { padding: 110px 0; }
+.strain-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 16px;
+}
+@media (max-width: 800px) { .strain-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .strain-grid { grid-template-columns: 1fr; } }
+
+.strain {
+  background: var(--cream);
+  padding: 14px 18px;
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  border: 1px solid rgba(31,58,42,.06);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-style: italic;
+}
+.strain span {
+  font-family: var(--display);
+  font-size: 11px;
+  color: var(--moss);
+  background: var(--lime);
+  padding: 4px 8px;
+  border-radius: 6px;
+  min-width: 30px;
+  text-align: center;
+  font-style: normal;
+}
+.inside__plus {
+  margin-top: 32px;
+  padding: 20px 24px;
+  background: var(--moss);
+  color: var(--cream-light);
+  border-radius: var(--radius-md);
+  font-size: 16px;
+  max-width: 720px;
+}
+.inside__plus strong { color: var(--lime); }
+.inside__plus em { color: var(--lime); font-style: italic; opacity: .85; }
+
+/* =========================================================
+   Reduced motion
+   ========================================================= */
+
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
   .marquee__track,
